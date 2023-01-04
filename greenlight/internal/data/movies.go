@@ -1,9 +1,30 @@
 package data
 
 import (
+	"github.com/jackc/pgx/v5/pgxpool"
 	"greenlight.alexedwards.net/internal/validator"
 	"time"
 )
+
+type MovieModel struct {
+	DB *pgxpool.Pool
+}
+
+func (m MovieModel) Insert(movie *Movie) error {
+	return nil
+}
+
+func (m MovieModel) Get(id int64) (*Movie, error) {
+	return nil, nil
+}
+
+func (m MovieModel) Update(movie *Movie) error {
+	return nil
+}
+
+func (m MovieModel) Delete(id int64) error {
+	return nil
+}
 
 type Movie struct {
 	ID        int64     `json:"id"`
